@@ -9,7 +9,7 @@ export class SpotifyService {
 
   urlSpotify: string = 'https://api.spotify.com/v1/';
   queryTopTrack: string = '/top-tracks?country=ES';
-  tokenSpotify: "BQDti7tQ_KT_-szB_q3SE108XqcAJhruOzg_HwYyQukZZrpFgPs1WJnOABi_K7ytSRCwknjcgnjAuUd9M2w";
+  tokenSpotify: "BQAeutRbsga2bGb1qV4dUqZFAdUmRLcRcCB2RbeJe__XqtcCJlIP-C2uSudapFd-6yRQ3XKh-rSemN3T3x8";
 
   constructor(public http:HttpClient) {
   console.log('Servicio spotify listo'); }
@@ -20,7 +20,7 @@ export class SpotifyService {
   getArtistas(termino:string){
   let url = `${this.urlSpotify}search?query=${termino}&type=artist&offset=0&limit=20`;
   let headers = new HttpHeaders ({
-    'Authorization' : 'Bearer BQDti7tQ_KT_-szB_q3SE108XqcAJhruOzg_HwYyQukZZrpFgPs1WJnOABi_K7ytSRCwknjcgnjAuUd9M2w'
+    'Authorization' : 'Bearer BQAeutRbsga2bGb1qV4dUqZFAdUmRLcRcCB2RbeJe__XqtcCJlIP-C2uSudapFd-6yRQ3XKh-rSemN3T3x8'
   })
 
   return this.http.get(url,{headers}).map( (resp:any) => {
@@ -31,7 +31,7 @@ export class SpotifyService {
 
   private getHeaders() : HttpHeaders{
     let headers = new HttpHeaders ({
-      'Authorization' : 'Bearer BQDti7tQ_KT_-szB_q3SE108XqcAJhruOzg_HwYyQukZZrpFgPs1WJnOABi_K7ytSRCwknjcgnjAuUd9M2w'
+      'Authorization' : 'Bearer BQAeutRbsga2bGb1qV4dUqZFAdUmRLcRcCB2RbeJe__XqtcCJlIP-C2uSudapFd-6yRQ3XKh-rSemN3T3x8'
     });
     return headers;
   }

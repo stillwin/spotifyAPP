@@ -39,6 +39,9 @@ hr{
 .img-circle{
   border-radius: 100%;
 }
+.img-50{
+  width: 50px;
+}
 
 
 /* Animaciones */
